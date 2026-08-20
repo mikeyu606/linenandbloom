@@ -72,7 +72,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="bg-maroon py-12 sm:py-20 px-4 sm:px-6">
+    <section id="faq" className="bg-maroon py-12 sm:py-20 px-4 sm:px-6">
       <div className="mx-auto w-full max-w-3xl">
         <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-black lowercase text-cream mb-8 sm:mb-10">
           faq

@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import FounderStory from "./components/FounderStory";
 import HowItWorks from "./components/HowItWorks";
 import MobileNav from "./components/MobileNav";
+import PricingSection from "./components/PricingSection";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
 
       <MobileNav />
 
-      <section className="flex flex-col md:flex-row md:items-center bg-cream flex-1 w-full">
+      <section className="flex flex-col md:flex-row md:items-stretch bg-cream flex-1 w-full md:min-h-[calc(100svh-7.5rem)]">
         <div className="w-full flex-1 px-6 md:px-16 lg:px-24 py-10 md:py-24 text-center md:text-left flex flex-col items-center md:items-start">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
@@ -48,13 +49,10 @@ export default function Home() {
             <p className="text-xs sm:text-sm text-maroon/75 leading-relaxed">
               ✦ $150 intro clean (Reg. $250) · Strictly limited to first 20 homes
             </p>
-            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.18em] text-maroon/55">
-              Biweekly Route · Brentwood · Westwood · Santa Monica
-            </p>
           </div>
         </div>
 
-        <div className="w-full flex-1 relative bg-pink min-h-[420px] sm:min-h-[480px] md:min-h-[640px] flex items-center justify-center px-6 py-10 md:py-16">
+        <div className="w-full flex-1 relative bg-pink min-h-[380px] sm:min-h-[440px] md:min-h-0 md:h-full flex items-center justify-center px-6 py-8 md:py-10">
           <BeforeAfterDoor
             beforeSrc="/before-kitchen.jpg"
             afterSrc="/after-kitchen.jpg"
@@ -141,6 +139,8 @@ export default function Home() {
       </section>
 
       <HowItWorks />
+
+      <PricingSection />
 
       <FounderStory />
 

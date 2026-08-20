@@ -4,7 +4,7 @@ import Link from "next/link";
 const serviceLinks = [
   { label: "Our Route", href: "#" },
   { label: "Our Standard", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Book a Reset", href: "#" },
 ];
 

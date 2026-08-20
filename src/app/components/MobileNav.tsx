@@ -6,12 +6,12 @@ import { useState } from "react";
 const leftLinks = [
   { label: "Our Route", href: "#" },
   { label: "Our Standard", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "Pricing", href: "#pricing" },
 ];
 
 const rightLinks = [
   { label: "West LA", href: "#" },
-  { label: "FAQ", href: "#" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function MobileNav() {
@@ -54,9 +54,9 @@ export default function MobileNav() {
         <div className="hidden md:flex items-center justify-between">
           <div className="flex items-center gap-6 text-sm font-bold uppercase tracking-wider">
             {leftLinks.map((link) => (
-              <span key={link.label} className="cursor-pointer">
+              <a key={link.label} href={link.href} className="cursor-pointer hover:opacity-70 transition-opacity">
                 {link.label}
-              </span>
+              </a>
             ))}
           </div>
           <Image
@@ -69,9 +69,9 @@ export default function MobileNav() {
           />
           <div className="flex items-center gap-6 text-sm font-bold uppercase tracking-wider">
             {rightLinks.map((link) => (
-              <span key={link.label} className="cursor-pointer">
+              <a key={link.label} href={link.href} className="cursor-pointer hover:opacity-70 transition-opacity">
                 {link.label}
-              </span>
+              </a>
             ))}
             <button className="bg-maroon text-cream font-bold uppercase tracking-wider text-xs py-2.5 px-5 rounded-full hover:bg-maroon-light transition-colors cursor-pointer">
               Book a Reset
@@ -84,9 +84,14 @@ export default function MobileNav() {
         <div className="md:hidden bg-cream border-b border-maroon/10 px-6 py-4">
           <div className="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider">
             {[...leftLinks, ...rightLinks].map((link) => (
-              <span key={link.label} className="cursor-pointer">
+              <a
+                key={link.label}
+                href={link.href}
+                className="cursor-pointer"
+                onClick={() => setOpen(false)}
+              >
                 {link.label}
-              </span>
+              </a>
             ))}
           </div>
         </div>
