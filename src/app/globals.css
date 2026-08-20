@@ -10,6 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-maroon: #4A0E0E;
+  --color-maroon-light: #6B1A1A;
+  --color-cream: #FFF8F0;
+  --color-pink: #F9C6D0;
+  --color-pink-dark: #E8A0B0;
+  --color-gold: #D4A843;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +26,22 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-maroon);
+  overflow-x: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
