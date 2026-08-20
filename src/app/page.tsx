@@ -1,5 +1,9 @@
 import Image from "next/image";
 import BeforeAfterDoor from "./components/BeforeAfterDoor";
+import FaqSection from "./components/FaqSection";
+import Footer from "./components/Footer";
+import FounderStory from "./components/FounderStory";
+import HowItWorks from "./components/HowItWorks";
 import MobileNav from "./components/MobileNav";
 
 export default function Home() {
@@ -33,27 +37,20 @@ export default function Home() {
 
           <p className="text-base sm:text-lg text-maroon/70 mb-6 leading-relaxed max-w-md">
             A boutique home-cleaning service founded by UCLA students.
-            Dedicated cleaners, thoughtful products, and the kind of attention to detail
+            Dedicated cleaners, thoughtful products, and the personal attention
             you don&apos;t get from a rotating crew.
-          </p>
-
-          <div className="mb-8">
-            <p className="font-black uppercase tracking-wider text-maroon text-sm">
-              $150 Founding Credit
-            </p>
-            <p className="text-maroon/70 text-sm mt-1">
-              Limited to our first 20 homes.
-            </p>
-          </div>
-
-          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.18em] text-maroon/55 mb-6 max-w-sm">
-            Biweekly Home Care · Brentwood · Westwood · Santa Monica
           </p>
 
           <div className="flex flex-col gap-3 w-full max-w-sm">
             <button className="w-full bg-maroon text-cream font-bold uppercase tracking-wider text-sm py-4 px-8 rounded-full hover:bg-maroon-light transition-colors cursor-pointer">
-              Claim Your Founding Spot
+              CLAIM $150 FOUNDING SPOT
             </button>
+            <p className="text-xs sm:text-sm text-maroon/75 leading-relaxed">
+              ✦ $150 intro clean (Reg. $250) · Strictly limited to first 20 homes
+            </p>
+            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] sm:tracking-[0.18em] text-maroon/55">
+              Biweekly Route · Brentwood · Westwood · Santa Monica
+            </p>
           </div>
         </div>
 
@@ -143,6 +140,12 @@ export default function Home() {
         </div>
       </section>
 
+      <HowItWorks />
+
+      <FounderStory />
+
+      <FaqSection />
+
       <div className="bg-maroon text-cream py-3 overflow-hidden whitespace-nowrap w-full">
         <div className="animate-marquee inline-flex gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider">
           {[...Array(2)].map((_, i) => (
@@ -157,6 +160,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
