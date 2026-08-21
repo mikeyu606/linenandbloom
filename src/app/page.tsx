@@ -37,23 +37,22 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight mb-6 max-w-2xl">
+          <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight mb-4 max-w-3xl">
             Your home,
             <br />
-            beautifully
-            <br />
-            cared for.
+            beautifully cared for.
           </h1>
 
-          <p className="text-base sm:text-lg text-maroon/70 mb-6 leading-relaxed max-w-md">
+          <p className="text-xl sm:text-2xl text-maroon/80 mb-8 sm:mb-10 leading-snug max-w-xl">
             Boutique recurring home cleaning for West LA, founded by UCLA students.
           </p>
 
-          <div className="w-full max-w-sm">
+          <div className="w-full max-w-md">
             <ContactCtas
               primaryLabel="CLAIM $150 INTRO CLEAN"
               align="center"
-              className="[&_p]:text-center md:[&_p]:text-left"
+              className="max-w-none [&_p]:text-center md:[&_p]:text-left"
+              primaryClassName="w-full bg-maroon text-cream font-bold uppercase tracking-wider text-sm sm:text-base py-5 px-8 rounded-full hover:bg-maroon-light transition-colors text-center shadow-sm"
               showOfferNote
             />
           </div>

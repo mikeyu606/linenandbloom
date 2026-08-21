@@ -41,9 +41,9 @@ export default function MobileNav() {
           <Image
             src="/linen2.png"
             alt="Linen & Bloom"
-            width={120}
-            height={60}
-            className="h-10 w-auto"
+            width={160}
+            height={80}
+            className="h-12 w-auto"
             priority
           />
           <a
@@ -66,9 +66,9 @@ export default function MobileNav() {
           <Image
             src="/linen2.png"
             alt="Linen & Bloom"
-            width={120}
-            height={60}
-            className="h-12 w-auto"
+            width={180}
+            height={90}
+            className="h-16 w-auto"
             priority
           />
           <div className="flex items-center gap-6 text-sm font-bold uppercase tracking-wider">
