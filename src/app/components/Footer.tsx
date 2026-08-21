@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PHONE_DISPLAY, smsHref, telHref } from "../../lib/contact";
 
 const serviceLinks = [
   { label: "Our Route", href: "#" },
   { label: "Our Standard", href: "#" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Book a Reset", href: "#" },
+  { label: "Text Us", href: "sms" },
 ];
 
 const infoLinks = [
   { label: "West LA Service Area", href: "#" },
-  { label: "FAQ", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Call Us", href: "tel" },
   { label: "Privacy Policy", href: "#" },
   { label: "Terms of Service", href: "#" },
 ];
@@ -59,8 +60,20 @@ export default function Footer() {
               height={80}
               className="h-14 sm:h-16 w-auto mb-4"
             />
-            <p className="text-sm sm:text-base text-maroon/80 leading-relaxed max-w-xs">
-              Claim your $150 founding spot on our West LA biweekly route.
+            <p className="text-sm sm:text-base text-maroon/80 leading-relaxed max-w-xs mb-4">
+              Prefer texting? Tap below and we&apos;ll get back fast — perfect if you just scanned our card.
+            </p>
+            <a
+              href={smsHref()}
+              className="inline-flex items-center justify-center rounded-full bg-maroon text-cream text-xs font-bold uppercase tracking-wider px-5 py-2.5 hover:bg-maroon-light transition-colors"
+            >
+              Text Us
+            </a>
+            <p className="text-xs text-maroon/55 mt-3">
+              Or call{" "}
+              <a href={telHref()} className="underline underline-offset-2 hover:text-maroon">
+                {PHONE_DISPLAY}
+              </a>
             </p>
           </div>
 
@@ -69,16 +82,25 @@ export default function Footer() {
               Service
             </h3>
             <ul className="space-y-2.5">
-              {serviceLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-maroon underline underline-offset-2 hover:text-maroon-light transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {serviceLinks.map((link) => {
+                const href = link.href === "sms" ? smsHref() : link.href;
+                const isExternalProtocol = href.startsWith("sms:") || href.startsWith("tel:");
+                const className =
+                  "text-sm text-maroon underline underline-offset-2 hover:text-maroon-light transition-colors";
+                return (
+                  <li key={link.label}>
+                    {isExternalProtocol ? (
+                      <a href={href} className={className}>
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={href} className={className}>
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -87,16 +109,25 @@ export default function Footer() {
               Info
             </h3>
             <ul className="space-y-2.5">
-              {infoLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-maroon underline underline-offset-2 hover:text-maroon-light transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {infoLinks.map((link) => {
+                const href = link.href === "tel" ? telHref() : link.href;
+                const isExternalProtocol = href.startsWith("sms:") || href.startsWith("tel:");
+                const className =
+                  "text-sm text-maroon underline underline-offset-2 hover:text-maroon-light transition-colors";
+                return (
+                  <li key={link.label}>
+                    {isExternalProtocol ? (
+                      <a href={href} className={className}>
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link href={href} className={className}>
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

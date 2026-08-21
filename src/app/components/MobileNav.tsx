@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { smsHref } from "../../lib/contact";
 
 const leftLinks = [
   { label: "Our Route", href: "#" },
@@ -45,9 +46,12 @@ export default function MobileNav() {
             className="h-10 w-auto"
             priority
           />
-          <button className="bg-maroon text-cream font-bold uppercase tracking-wider text-[10px] py-2 px-3 rounded-full hover:bg-maroon-light transition-colors cursor-pointer shrink-0">
-            Book a Reset
-          </button>
+          <a
+            href={smsHref()}
+            className="bg-maroon text-cream font-bold uppercase tracking-wider text-[10px] py-2 px-3 rounded-full hover:bg-maroon-light transition-colors shrink-0"
+          >
+            Text Us
+          </a>
         </div>
 
         {/* Desktop */}
@@ -73,9 +77,12 @@ export default function MobileNav() {
                 {link.label}
               </a>
             ))}
-            <button className="bg-maroon text-cream font-bold uppercase tracking-wider text-xs py-2.5 px-5 rounded-full hover:bg-maroon-light transition-colors cursor-pointer">
-              Book a Reset
-            </button>
+            <a
+              href={smsHref()}
+              className="bg-maroon text-cream font-bold uppercase tracking-wider text-xs py-2.5 px-5 rounded-full hover:bg-maroon-light transition-colors"
+            >
+              Text Us
+            </a>
           </div>
         </div>
       </nav>
@@ -93,6 +100,9 @@ export default function MobileNav() {
                 {link.label}
               </a>
             ))}
+            <a href={smsHref()} className="cursor-pointer" onClick={() => setOpen(false)}>
+              Text Us
+            </a>
           </div>
         </div>
       )}

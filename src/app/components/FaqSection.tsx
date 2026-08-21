@@ -14,9 +14,9 @@ const FAQ_ITEMS = [
       "We currently serve Brentwood, Westwood, and Santa Monica on our West LA biweekly route. We're keeping the route intentionally small to protect quality.",
   },
   {
-    question: "What's included in the $150 founding clean?",
+    question: "What's included in the $150 intro clean?",
     answer:
-      "Your founding clean is a full boutique reset of your home using the Linen & Bloom standard — kitchen, bathrooms, living areas, and the details that matter most to you.",
+      "Your intro clean is a full boutique reset of your home using the Linen & Bloom standard — kitchen, bathrooms, living areas, and the details that matter most to you.",
   },
   {
     question: "Are your products safe for marble and pets?",
@@ -26,12 +26,12 @@ const FAQ_ITEMS = [
   {
     question: "How does biweekly pricing work?",
     answer:
-      "After your founding clean, biweekly home care is a flat $250 per visit — no hourly surprises, no hidden overages. Simple, predictable, and transparent.",
+      "After your intro clean, biweekly home care is a flat $250 per visit — no hourly surprises, no hidden overages. Simple, predictable, and transparent.",
   },
   {
     question: "Are you insured and bonded?",
     answer:
-      "Yes. Linen & Bloom is fully insured and bonded. Every visit is founder-led with clear standards and accountability built in from day one.",
+      "Yes. Linen & Bloom is fully insured and bonded. Every visit is owner-led with clear standards and accountability.",
   },
 ];
 

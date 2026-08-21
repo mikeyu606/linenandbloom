@@ -1,9 +1,11 @@
+import ContactCtas from "./ContactCtas";
+
 const STEPS = [
   {
     number: "01",
-    title: "Claim Your Founding Spot",
+    title: "Book Your Intro Clean",
     description:
-      "Reserve one of 20 homes on our West LA route. Share your home details and preferred schedule — it takes just a few minutes.",
+      "Share your home details and preferred schedule — it takes just a few minutes to get on our West LA route.",
   },
   {
     number: "02",
@@ -47,10 +49,11 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="text-center mt-10 sm:mt-12">
-          <button className="w-full sm:w-auto bg-maroon text-cream font-bold uppercase tracking-wider text-sm py-4 px-8 sm:px-12 rounded-full hover:bg-maroon-light transition-colors cursor-pointer">
-            Claim $150 Founding Spot
-          </button>
+        <div className="mt-10 sm:mt-12 max-w-sm mx-auto">
+          <ContactCtas
+            primaryLabel="CLAIM $150 INTRO CLEAN"
+            align="center"
+          />
         </div>
       </div>
     </section>

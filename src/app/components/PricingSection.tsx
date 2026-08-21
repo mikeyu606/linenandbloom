@@ -1,20 +1,23 @@
+import { PHONE_DISPLAY, smsHref, telHref } from "../../lib/contact";
+
 const PLANS = [
   {
-    id: "founding",
-    badge: "Limited · First 20 Homes",
-    name: "Founding Spot",
+    id: "intro",
+    badge: "Limited Availability",
+    name: "Intro Clean",
     price: "$150",
     priceNote: "first clean",
     compareAt: "Reg. $250",
     description:
-      "Your intro reset at our founding rate — then join the biweekly route at the flat rate below.",
+      "Your first reset at our intro rate — then join the biweekly route at the flat rate below.",
     features: [
       "Full boutique home reset",
       "Dedicated cleaner assigned",
       "Thoughtful, home-safe products",
       "Brentwood · Westwood · Santa Monica",
     ],
-    cta: "Claim $150 Founding Spot",
+    cta: "CLAIM $150 INTRO CLEAN",
+    smsBody: "Hi Sophie! I'd like to book the $150 intro clean for my home.",
     featured: true,
   },
   {
@@ -23,16 +26,17 @@ const PLANS = [
     name: "Biweekly Route",
     price: "$250",
     priceNote: "per visit",
-    compareAt: null,
+    compareAt: null as string | null,
     description:
       "Flat pricing every other week. No hourly quotes, no surprise add-ons — just a consistent standard.",
     features: [
       "Same cleaner every visit",
       "Kitchen, baths, living & suite standard",
       "Clear flat rate — no overages",
-      "Insured, bonded & founder-led",
+      "Insured, bonded & owner-led",
     ],
-    cta: "Join the Biweekly Route",
+    cta: "TEXT US TO JOIN BIWEEKLY",
+    smsBody: "Hi Sophie! I'm interested in joining the $250 biweekly route.",
     featured: false,
   },
 ];
@@ -114,22 +118,39 @@ export default function PricingSection() {
                 ))}
               </ul>
 
-              <button
-                type="button"
-                className={`w-full rounded-full py-3.5 px-6 text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer ${
-                  plan.featured
-                    ? "bg-cream text-maroon hover:bg-white"
-                    : "bg-maroon text-cream hover:bg-maroon-light"
-                }`}
-              >
-                {plan.cta}
-              </button>
+              <div className="flex flex-col gap-2.5 mt-auto">
+                <a
+                  href={smsHref(plan.smsBody)}
+                  className={`w-full rounded-full py-3.5 px-6 text-sm font-bold uppercase tracking-wider transition-colors text-center ${
+                    plan.featured
+                      ? "bg-cream text-maroon hover:bg-white"
+                      : "bg-maroon text-cream hover:bg-maroon-light"
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+                <p
+                  className={`text-xs text-center font-medium ${
+                    plan.featured ? "text-cream/75" : "text-maroon/70"
+                  }`}
+                >
+                  Prefer to call?{" "}
+                  <a
+                    href={telHref()}
+                    className={`underline font-semibold hover:opacity-80 ${
+                      plan.featured ? "text-cream" : "text-maroon"
+                    }`}
+                  >
+                    {PHONE_DISPLAY}
+                  </a>
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
         <p className="text-center text-xs sm:text-sm text-maroon/55 mt-8 max-w-md mx-auto leading-relaxed">
-          Founding rate applies to your first clean only. After that, biweekly visits are a flat $250.
+          Intro rate applies to your first clean only. After that, biweekly visits are a flat $250.
         </p>
       </div>
     </section>

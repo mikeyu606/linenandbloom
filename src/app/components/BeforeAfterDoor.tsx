@@ -46,7 +46,7 @@ export default function BeforeAfterDoor({
   return (
     <div
       ref={containerRef}
-      className="relative h-[min(52svh,400px)] sm:h-[min(56svh,460px)] md:h-[min(60svh,500px)] aspect-[3/4] max-w-full select-none touch-none cursor-ew-resize overflow-hidden shadow-2xl mx-auto"
+      className="relative h-[min(58svh,460px)] sm:h-[min(64svh,540px)] md:h-[min(72svh,620px)] aspect-[3/4] max-w-full select-none touch-none cursor-ew-resize overflow-hidden shadow-2xl mx-auto"
       style={{ borderRadius: "9999px 9999px 1.25rem 1.25rem" }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}

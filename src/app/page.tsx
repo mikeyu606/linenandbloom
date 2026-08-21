@@ -1,24 +1,31 @@
 import Image from "next/image";
 import BeforeAfterDoor from "./components/BeforeAfterDoor";
+import ContactCtas from "./components/ContactCtas";
 import FaqSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import FounderStory from "./components/FounderStory";
 import HowItWorks from "./components/HowItWorks";
 import MobileNav from "./components/MobileNav";
 import PricingSection from "./components/PricingSection";
+import { smsHref } from "../lib/contact";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden">
-      <div className="bg-maroon text-cream text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide leading-snug">
-        FOUNDING ROUTE: FIRST CLEAN $150 (REG. $250) •{" "}
-        <span className="underline cursor-pointer">CLAIM YOUR SPOT</span>
+    <div className="flex flex-col overflow-x-hidden">
+      <div className="flex flex-col min-h-svh">
+      <div className="bg-maroon text-cream text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide leading-snug shrink-0">
+        FIRST CLEAN $150 (REG. $250) •{" "}
+        <a href={smsHref()} className="underline">
+          TEXT US TO CLAIM
+        </a>
       </div>
 
-      <MobileNav />
+      <div className="shrink-0">
+        <MobileNav />
+      </div>
 
-      <section className="flex flex-col md:flex-row md:items-stretch bg-cream flex-1 w-full md:min-h-[calc(100svh-7.5rem)]">
-        <div className="w-full flex-1 px-6 md:px-16 lg:px-24 py-10 md:py-24 text-center md:text-left flex flex-col items-center md:items-start">
+      <section className="flex flex-col md:grid md:grid-cols-[1.15fr_0.85fr] bg-pink md:bg-cream w-full flex-1 md:min-h-0">
+        <div className="w-full bg-cream px-6 md:px-16 lg:px-24 py-10 md:pt-16 md:pb-10 lg:pt-20 text-center md:text-left flex flex-col items-center md:items-start md:justify-center shrink-0">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-1 mb-4">
             {[...Array(5)].map((_, i) => (
               <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-gold fill-current" viewBox="0 0 20 20">
@@ -37,46 +44,51 @@ export default function Home() {
           </h1>
 
           <p className="text-base sm:text-lg text-maroon/70 mb-6 leading-relaxed max-w-md">
-            A boutique home-cleaning service founded by UCLA students.
-            Dedicated cleaners, thoughtful products, and the personal attention
-            you don&apos;t get from a rotating crew.
+            Boutique recurring home cleaning for West LA, founded by UCLA students.
           </p>
 
-          <div className="flex flex-col gap-3 w-full max-w-sm">
-            <button className="w-full bg-maroon text-cream font-bold uppercase tracking-wider text-sm py-4 px-8 rounded-full hover:bg-maroon-light transition-colors cursor-pointer">
-              CLAIM $150 FOUNDING SPOT
-            </button>
-            <p className="text-xs sm:text-sm text-maroon/75 leading-relaxed">
-              ✦ $150 intro clean (Reg. $250) · Strictly limited to first 20 homes
-            </p>
+          <div className="w-full max-w-sm">
+            <ContactCtas
+              primaryLabel="CLAIM $150 INTRO CLEAN"
+              align="center"
+              className="[&_p]:text-center md:[&_p]:text-left"
+              showOfferNote
+            />
           </div>
         </div>
 
-        <div className="w-full flex-1 relative bg-pink min-h-[380px] sm:min-h-[440px] md:min-h-0 md:h-full flex items-center justify-center px-6 py-8 md:py-10">
+        <div className="w-full relative bg-pink flex-1 min-h-[380px] sm:min-h-[440px] md:min-h-0 md:h-full flex items-center justify-center px-4 sm:px-5 md:px-6 py-6 md:py-8">
           <BeforeAfterDoor
             beforeSrc="/before-kitchen.jpg"
             afterSrc="/after-kitchen.jpg"
             beforeAlt="Kitchen before Linen & Bloom cleaning"
             afterAlt="Kitchen after Linen & Bloom cleaning"
           />
-          <div className="absolute top-6 left-4 sm:top-8 sm:left-8 md:top-12 md:left-12 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
+          <div className="absolute top-8 left-3 sm:top-10 sm:left-5 md:top-14 md:left-6 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
             <span className="text-base sm:text-lg md:text-xl font-black text-maroon leading-none">UCLA</span>
             <span className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-maroon mt-1">
               Student-Founded
             </span>
           </div>
-          <div className="absolute bottom-6 right-4 sm:bottom-12 sm:left-8 sm:right-auto md:bottom-16 md:left-8 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
+          <div className="absolute bottom-8 left-3 sm:bottom-12 sm:left-5 md:bottom-16 md:left-6 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
             <span className="text-base sm:text-lg md:text-xl font-black text-maroon leading-none">1 OF 20</span>
             <span className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-maroon mt-1">
-              Founding Homes
+              Route Spots
             </span>
           </div>
         </div>
       </section>
+      </div>
 
       <section className="relative bg-gradient-to-b from-maroon to-maroon-light py-12 sm:py-20 overflow-hidden w-full">
         <div className="absolute top-0 left-0 right-0">
-          <svg viewBox="0 0 1440 60" className="w-full block" preserveAspectRatio="none">
+          <svg viewBox="0 0 1440 60" className="w-full block md:hidden" preserveAspectRatio="none">
+            <path
+              d="M0,0 L1440,0 L1440,20 Q1400,20 1380,35 Q1360,55 1340,30 Q1320,10 1300,20 L1300,20 Q1280,35 1260,20 Q1240,10 1200,20 Q1160,40 1120,20 Q1100,10 1060,25 Q1020,50 980,20 Q960,10 920,20 Q880,40 840,20 Q820,10 780,30 Q740,55 700,25 Q680,10 640,20 Q600,40 560,20 Q540,10 500,25 Q460,50 420,20 Q400,10 360,20 Q320,40 280,20 Q260,10 220,30 Q180,55 140,20 Q120,10 80,25 Q40,45 0,20 Z"
+              fill="#F9C6D0"
+            />
+          </svg>
+          <svg viewBox="0 0 1440 60" className="w-full hidden md:block" preserveAspectRatio="none">
             <path
               d="M0,0 L1440,0 L1440,20 Q1400,20 1380,35 Q1360,55 1340,30 Q1320,10 1300,20 L1300,20 Q1280,35 1260,20 Q1240,10 1200,20 Q1160,40 1120,20 Q1100,10 1060,25 Q1020,50 980,20 Q960,10 920,20 Q880,40 840,20 Q820,10 780,30 Q740,55 700,25 Q680,10 640,20 Q600,40 560,20 Q540,10 500,25 Q460,50 420,20 Q400,10 360,20 Q320,40 280,20 Q260,10 220,30 Q180,55 140,20 Q120,10 80,25 Q40,45 0,20 Z"
               fill="#FFF8F0"
@@ -111,7 +123,7 @@ export default function Home() {
               { ours: "Familiar Cleaners, Not a Random Crew", theirs: "Whoever Shows Up That Day" },
               { ours: "Thoughtful, Home-Safe Products", theirs: "Harsh Industrial Chemicals" },
               { ours: "Clear Flat Pricing Biweekly", theirs: "Hidden Hourly Overages" },
-              { ours: "Insured, Bonded & Founder-Led", theirs: "Anonymous Gig Marketplace" },
+              { ours: "Insured, Bonded & Owner-Led", theirs: "Anonymous Gig Marketplace" },
             ].map((row, i) => (
               <div key={i} className={`grid grid-cols-2 ${i < 3 ? "border-b border-maroon/10" : ""}`}>
                 <div className="flex items-start sm:items-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-4 sm:py-5 border-r border-maroon/10">
@@ -131,10 +143,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="text-center mt-8 sm:mt-12 px-4">
-          <button className="w-full sm:w-auto bg-maroon text-cream font-bold uppercase tracking-wider text-sm py-4 px-8 sm:px-12 rounded-full border-2 border-cream hover:bg-cream hover:text-maroon transition-colors cursor-pointer">
-            Join the Route
-          </button>
+        <div className="text-center mt-8 sm:mt-12 px-4 flex justify-center">
+          <ContactCtas
+            primaryLabel="CLAIM $150 INTRO CLEAN"
+            align="center"
+            light
+            primaryClassName="w-full bg-maroon text-cream font-bold uppercase tracking-wider text-sm py-4 px-8 rounded-full border-2 border-cream hover:bg-cream hover:text-maroon transition-colors text-center shadow-sm"
+          />
         </div>
       </section>
 
@@ -154,7 +169,7 @@ export default function Home() {
               <span>Boutique Home Care</span>
               <span>West LA Route</span>
               <span>Insured & Bonded</span>
-              <span>First 20 Homes · $150 Credit</span>
+              <span>Limited Route · $150 Intro Clean</span>
               <span className="mr-8">Brentwood · Westwood · Santa Monica</span>
             </span>
           ))}
