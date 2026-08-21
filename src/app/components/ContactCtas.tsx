@@ -18,7 +18,7 @@ export default function ContactCtas({
   primaryClassName = "w-full bg-maroon text-cream font-bold uppercase tracking-wider text-sm py-4 px-8 rounded-full hover:bg-maroon-light transition-colors text-center shadow-sm",
   align = "left",
   showOfferNote = false,
-  offerNote = "✦ $150 intro clean (Reg. $250) · Limited availability on our West LA route",
+  offerNote = "✦ $150 intro clean (Reg. $200) · Limited availability on our West LA route",
   light = false,
 }: ContactCtasProps) {
   const textAlign = align === "center" ? "text-center" : "text-left md:text-left";

@@ -14,7 +14,7 @@ export default function Home() {
     <div className="flex flex-col overflow-x-hidden">
       <div className="flex flex-col min-h-svh">
       <div className="bg-maroon text-cream text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide leading-snug shrink-0">
-        FIRST CLEAN $150 (REG. $250) •{" "}
+        FIRST CLEAN $150 (REG. $200) •{" "}
         <a href={smsHref()} className="underline">
           TEXT US TO CLAIM
         </a>

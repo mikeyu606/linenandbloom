@@ -26,12 +26,17 @@ const FAQ_ITEMS = [
   {
     question: "How does biweekly pricing work?",
     answer:
-      "After your intro clean, biweekly home care is a flat $250 per visit — no hourly surprises, no hidden overages. Simple, predictable, and transparent.",
+      "After your intro clean, biweekly home care is a flat $200 per visit — no hourly surprises, no hidden overages. Simple, predictable, and transparent.",
   },
   {
     question: "Are you insured and bonded?",
     answer:
       "Yes. Linen & Bloom is fully insured and bonded. Every visit is owner-led with clear standards and accountability.",
+  },
+  {
+    question: "What is the Linen & Bloom Guarantee?",
+    answer:
+      "If something doesn't meet our standard, let us know within 24 hours. We'll come back and make it right — at no additional cost.",
   },
 ];
 
