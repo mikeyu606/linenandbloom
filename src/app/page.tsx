@@ -33,7 +33,7 @@ export default function Home() {
               </svg>
             ))}
             <span className="text-xs sm:text-sm ml-1 sm:ml-2 font-medium uppercase tracking-wide">
-              UCLA Student-Founded • West LA
+            5.0 RATED BOUTIQUE HOME CARE
             </span>
           </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base sm:text-xl md:text-2xl text-maroon/80 mb-6 sm:mb-8 md:mb-10 leading-snug max-w-xl">
-            Boutique recurring home cleaning for West LA, founded by UCLA students.
+            Boutique recurring home cleaning for West LA, founded and run by UCLA students.
           </p>
 
           <div className="w-full max-w-md">
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="absolute top-8 left-3 sm:top-10 sm:left-5 md:top-14 md:left-6 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
             <span className="text-base sm:text-lg md:text-xl font-black text-maroon leading-none">UCLA</span>
             <span className="text-[9px] sm:text-[10px] md:text-xs font-bold uppercase tracking-wider text-maroon mt-1">
-              Student-Founded
+              Student-Run
             </span>
           </div>
           <div className="absolute bottom-8 left-3 sm:bottom-12 sm:left-5 md:bottom-16 md:left-6 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
@@ -166,7 +166,7 @@ export default function Home() {
         <div className="animate-marquee inline-flex gap-8 text-xs sm:text-sm font-bold uppercase tracking-wider">
           {[...Array(2)].map((_, i) => (
             <span key={i} className="inline-flex items-center gap-8">
-              <span>UCLA Student-Founded</span>
+              <span>UCLA Student-Run</span>
               <span>Boutique Home Care</span>
               <span>West LA Route</span>
               <span>Insured & Bonded</span>

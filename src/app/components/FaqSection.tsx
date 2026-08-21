@@ -21,7 +21,7 @@ const FAQ_ITEMS = [
   {
     question: "Are your products safe for marble and pets?",
     answer:
-      "We use thoughtful, home-safe formulas selected for stone surfaces, finishes, and homes with pets. No harsh industrial bleach or residue-heavy chemicals.",
+      "Yes. We use thoughtful, home-safe formulas selected for stone surfaces, finishes, and homes with pets. No harsh industrial bleach or residue-heavy chemicals.",
   },
   {
     question: "How does biweekly pricing work?",
