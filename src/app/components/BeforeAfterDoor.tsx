@@ -67,7 +67,7 @@ export default function BeforeAfterDoor({
         src={afterSrc}
         alt={afterAlt}
         fill
-        className="object-cover pointer-events-none"
+        className="object-cover object-center pointer-events-none"
         priority
         sizes="420px"
         draggable={false}
@@ -81,7 +81,7 @@ export default function BeforeAfterDoor({
           src={beforeSrc}
           alt={beforeAlt}
           fill
-          className="object-cover pointer-events-none"
+          className="object-cover object-center pointer-events-none"
           priority
           sizes="420px"
           draggable={false}

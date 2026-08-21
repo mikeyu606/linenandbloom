@@ -37,10 +37,12 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-black leading-[1.05] mb-6 max-w-xl">
+          <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight mb-6 max-w-2xl">
             Your home,
             <br />
-            beautifully reset.
+            beautifully
+            <br />
+            cared for.
           </h1>
 
           <p className="text-base sm:text-lg text-maroon/70 mb-6 leading-relaxed max-w-md">
@@ -61,8 +63,8 @@ export default function Home() {
           <BeforeAfterDoor
             beforeSrc="/before-kitchen.jpg"
             afterSrc="/after-kitchen.jpg"
-            beforeAlt="Kitchen before Linen & Bloom cleaning"
-            afterAlt="Kitchen after Linen & Bloom cleaning"
+            beforeAlt="Same kitchen before Linen & Bloom cleaning"
+            afterAlt="Same kitchen after Linen & Bloom cleaning"
           />
           <div className="absolute top-8 left-3 sm:top-10 sm:left-5 md:top-14 md:left-6 bg-pink-dark border-[3px] border-cream rounded-full w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex flex-col items-center justify-center shadow-lg text-center px-2 z-20">
             <span className="text-base sm:text-lg md:text-xl font-black text-maroon leading-none">UCLA</span>

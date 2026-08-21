@@ -28,7 +28,7 @@ export default function FounderStory() {
           <div className="flex flex-col items-center md:items-start shrink-0 w-full md:w-auto pt-2 md:pt-0">
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-md border border-maroon/10 mb-4">
               <Image
-                src="/friends.png"
+                src="/friends2.png"
                 alt="Linen & Bloom founders"
                 fill
                 className="object-cover"
