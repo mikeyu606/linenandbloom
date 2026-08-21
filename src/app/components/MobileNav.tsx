@@ -22,13 +22,13 @@ export default function MobileNav() {
     <>
       <nav className="bg-cream border-b border-maroon/10 px-4 md:px-12 py-4">
         {/* Mobile */}
-        <div className="flex md:hidden items-center justify-between gap-3">
+        <div className="grid md:hidden grid-cols-[1fr_auto_1fr] items-center gap-3">
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="p-2 -ml-2 cursor-pointer"
+            className="justify-self-start p-2 -ml-2 cursor-pointer"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {open ? (
@@ -48,7 +48,7 @@ export default function MobileNav() {
           />
           <a
             href={smsHref()}
-            className="bg-maroon text-cream font-bold uppercase tracking-wider text-[10px] py-2 px-3 rounded-full hover:bg-maroon-light transition-colors shrink-0"
+            className="justify-self-end bg-maroon text-cream font-bold uppercase tracking-wider text-[10px] py-2 px-3 rounded-full hover:bg-maroon-light transition-colors shrink-0"
           >
             Text Us
           </a>
