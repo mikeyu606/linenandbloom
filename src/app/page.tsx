@@ -37,13 +37,13 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-black leading-[1.02] tracking-tight mb-4 max-w-3xl">
+          <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-5xl lg:text-6xl font-black sm:leading-[1.05] tracking-tight mb-3 sm:mb-4 max-w-3xl">
             Your home,
             <br />
-            beautifully cared for.
+            <span className="sm:whitespace-nowrap">beautifully cared for.</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-maroon/80 mb-8 sm:mb-10 leading-snug max-w-xl">
+          <p className="text-base sm:text-xl md:text-2xl text-maroon/80 mb-6 sm:mb-8 md:mb-10 leading-snug max-w-xl">
             Boutique recurring home cleaning for West LA, founded by UCLA students.
           </p>
 
